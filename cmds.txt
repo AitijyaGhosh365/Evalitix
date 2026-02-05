@@ -1,0 +1,6 @@
+
+#cd inside frontend folder
+npm run dev
+
+#cd inside backend folder
+uvicorn src.main:app --reload
