@@ -22,8 +22,6 @@ from backend.services.permissions import assert_form_access
 from backend.services.generate_quantifiers import generate_quantifiers_llm
 
 
-print("Server Starting")
-print(os.getenv("FIREBASE_PROJECT_ID"))
 
 app = FastAPI()
 
