@@ -1,0 +1,51 @@
+{
+  "title": "Candidate Application",
+  "type": "object",
+  "required": ["fullName", "dob", "email", "phone", "gender"],
+  "properties": {
+    "fullName": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "dob": {
+      "type": "string",
+      "title": "Date of Birth",
+      "format": "date"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone Number",
+      "pattern": "^[6-9]\\d{9}$",
+      "description": "10-digit Indian mobile number"
+    },
+    "gender": {
+      "type": "string",
+      "title": "Gender",
+      "enum": ["Male", "Female", "Other", "Prefer not to say"]
+    },
+    "otherLinks": {
+      "type": "array",
+      "title": "Links",
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Link Description"
+          },
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  }
+}
