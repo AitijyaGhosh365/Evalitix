@@ -58,3 +58,6 @@ const NeuralBeam = () => {
     </div>
   );
 };
+
+
+export default NeuralBeam;
