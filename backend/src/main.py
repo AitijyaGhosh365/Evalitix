@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Request, Query, Depends
-from services.firebase_admin_init import db
+from backend.services.firebase_admin_init import db
 from fastapi.middleware.cors import CORSMiddleware
 import uuid, hashlib
 import requests
@@ -13,14 +13,17 @@ from typing import Any, Dict, Optional
 from datetime import datetime, timezone
 from firebase_admin import firestore, auth
 
-from services.firebase_admin_init import db
-from services.auth import verify_token, get_current_user
+from backend.services.firebase_admin_init import db
+from backend.services.auth import verify_token, get_current_user
 
 from fastapi import Depends
-from services.auth import get_current_user
-from services.permissions import assert_form_access
-from services.generate_quantifiers import generate_quantifiers_llm
+from backend.services.auth import get_current_user
+from backend.services.permissions import assert_form_access
+from backend.services.generate_quantifiers import generate_quantifiers_llm
 
+
+print("Server Starting")
+print(os.getenv("FIREBASE_PROJECT_ID"))
 
 app = FastAPI()
 
@@ -92,8 +95,8 @@ def get_user_forms(user=Depends(get_current_user)):
 
 
 from fastapi import Depends
-from services.auth import get_current_user
-from services.permissions import assert_form_access
+from backend.services.auth import get_current_user
+from backend.services.permissions import assert_form_access
 
 @app.get("/form/{form_id}")
 def get_form(form_id: str, user=Depends(get_current_user)):
