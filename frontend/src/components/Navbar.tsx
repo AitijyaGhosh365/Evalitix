@@ -60,7 +60,7 @@ export default function Navbar() {
           >
             <div className="w-9 h-9 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
                 <img
-                  src="src/assets/bg_blue_txt_white_logo.png"
+                  src="favicon.png"
                   alt="Evalitix Logo"
                   className="w-full h-full object-contain rounded-xl"
                 />
