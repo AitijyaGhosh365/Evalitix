@@ -92,7 +92,7 @@ const AnimatedBeam = ({
 const steps = [
   { icon: FileText, title: 'Create a hiring form', description: 'Define your job requirements and evaluation criteria.', color: 'from-blue-400 to-blue-600' },
   { icon: Share2, title: 'Share the link', description: 'Send a simple link to candidates - no login required.', color: 'from-cyan-400 to-cyan-600' },
-  { icon: Upload, title: 'Candidates Fills the forms', description: 'Easy submission process for all applicants.', color: 'from-teal-400 to-teal-600' },
+  { icon: Upload, title: 'candidate fills the form', description: 'Easy submission process for all applicants.', color: 'from-teal-400 to-teal-600' },
   { icon: Brain, title: 'AI Evaluation', description: 'Our engine scores and ranks every candidate accurately.', color: 'from-indigo-400 to-indigo-600' },
   { icon: BarChart3, title: 'Live Dashboard', description: 'Access a real-time leaderboard of best-fit talent.', color: 'from-violet-400 to-violet-600' },
   { icon: CheckCircle, title: 'Hire the Best', description: 'Interview the top 1% without manual screening.', color: 'from-emerald-400 to-emerald-600' },
