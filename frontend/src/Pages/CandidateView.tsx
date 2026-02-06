@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CandidateForm from "../components/CandidateForm";
 import CVpreviewer from "../components/CVpreviewer";
 import standardSchema from "../types/standardForm";
@@ -19,6 +19,10 @@ export default function CandidateView({
 
   // Logic for mobile switching
   const [activeTab, setActiveTab] = useState<"edit" | "preview">("edit");
+
+  useEffect(() => {
+  document.title = title;
+}, []);
 
   return (
     <div className="min-h-screen bg-[#F1F5F9] flex justify-center items-center font-sans relative">

@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import { FileQuestion, ChevronLeft } from "lucide-react";
+import { useEffect } from "react";
 
 export default function NotFound() {
+
+  useEffect(() => {
+  document.title = "404 Not Found";
+}, []);
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F1F5F9] font-sans px-6">
       <div className="text-center bg-white p-10 lg:p-14 rounded-[2.5rem] shadow-2xl shadow-slate-200/60 border border-slate-100 w-full max-w-md relative overflow-hidden">

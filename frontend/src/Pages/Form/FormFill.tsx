@@ -19,6 +19,11 @@ export default function FormFill() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+  document.title = "Form";
+}, []);
+
+
+  useEffect(() => {
     if (!uuid) return;
 
     fetch(`${import.meta.env.VITE_API_BASE_URL}/public/form/${uuid}`)

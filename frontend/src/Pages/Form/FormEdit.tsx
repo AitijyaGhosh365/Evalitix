@@ -80,6 +80,11 @@ export default function FormEdit() {
   const [confirming, setConfirming] = useState<boolean>(false);
 
   useEffect(() => {
+  document.title = "Edit Form";
+}, []);
+
+
+  useEffect(() => {
     if (!uuid) return;
 
     apiFetch(`/form/${uuid}`)

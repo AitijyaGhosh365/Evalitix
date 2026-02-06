@@ -91,7 +91,7 @@ export default function KeyFeatures() {
         </div>
 
         {/* Bottom Callout */}
-        <div className="mt-20 p-8 rounded-[3rem] bg-slate-900 flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* <div className="mt-20 p-8 rounded-[3rem] bg-slate-900 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-6">
                 <div className="flex -space-x-4">
                     {[1,2,3,4].map(i => (
@@ -105,7 +105,7 @@ export default function KeyFeatures() {
             <button className="px-8 py-4 bg-blue-600 text-white rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-blue-500 transition-colors">
                 Explore All Features
             </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

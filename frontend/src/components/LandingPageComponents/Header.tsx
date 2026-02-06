@@ -1,4 +1,4 @@
-import { Sparkles, Menu, X, LayoutDashboard, UserPlus } from 'lucide-react';
+import { Menu, X, LayoutDashboard, UserPlus } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
@@ -10,17 +10,21 @@ export default function Header() {
     <header className="fixed top-4 left-0 right-0 z-50 transition-all duration-300 pointer-events-none">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 pointer-events-auto">
         <div className="backdrop-blur-xl bg-white/40 border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-[2rem] px-6 py-3 transition-all hover:bg-white/50">
-          
+
           {/* DESKTOP LAYOUT (Hidden on mobile) */}
           <div className="hidden md:grid grid-cols-3 items-center w-full">
-            
+
             {/* LEFT: LOGO */}
-            <div 
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            <div
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center gap-2 group cursor-pointer justify-self-start"
             >
-              <div className="w-9 h-9 bg-linear-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
-                <Sparkles className="w-5 h-5 text-white" />
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+                <img
+                  src="src/assets/bg_blue_txt_white_logo.png"
+                  alt="Evalitix Logo"
+                  className="w-full h-full object-contain rounded-xl"
+                />
               </div>
               <span className="text-xl font-black text-slate-800 tracking-tighter">Evalitix</span>
             </div>
@@ -51,10 +55,16 @@ export default function Header() {
           {/* MOBILE LAYOUT (Hidden on desktop) */}
           <div className="flex md:hidden items-center justify-between">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-blue-600" />
+              <div className="w-9 h-9 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+                <img
+                  src="src/assets/bg_blue_txt_white_logo.png"
+                  alt="Evalitix Logo"
+                  className="w-full h-full object-contain rounded-xl"
+                />
+              </div>
               <span className="text-lg font-black text-slate-800">Evalitix</span>
             </div>
-            
+
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-800 hover:bg-white/40 rounded-xl transition-colors"
@@ -67,7 +77,7 @@ export default function Header() {
           {mobileMenuOpen && (
             <div className="md:hidden mt-4 pb-4 space-y-2 animate-in fade-in slide-in-from-top-4 duration-300">
               <div className="h-px bg-slate-200/50 w-full mb-4" />
-              
+
               <div className="grid grid-cols-1 gap-1 text-center">
                 <a href="#how-it-works" onClick={closeMenu} className="block text-slate-600 hover:text-cyan-500 font-bold py-2 px-4 rounded-xl hover:bg-white/30 transition-all">How It Works</a>
                 <a href="#features" onClick={closeMenu} className="block text-slate-600 hover:text-cyan-500 font-bold py-2 px-4 rounded-xl hover:bg-white/30 transition-all">Features</a>

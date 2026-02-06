@@ -1,4 +1,4 @@
-import { Sparkles, Mail, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
+import { Mail, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,9 +12,13 @@ export default function Footer() {
           {/* BRAND SECTION */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center shadow-xl shadow-slate-200">
-                <Sparkles className="w-5 h-5 text-blue-400" />
-              </div>
+                            <div className="w-1- h-10 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+  <img
+    src="src/assets/bg_blue_txt_white_logo.png"
+    alt="Evalitix Logo"
+    className="w-full h-full object-contain rounded-xl"
+  />
+</div>
               <span className="text-2xl font-black text-slate-900 tracking-tighter">
                 Evalitix
               </span>
@@ -67,7 +71,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-sm font-bold text-slate-500">
                 <Mail size={16} className="text-blue-500" />
-                <span>hello@jobthing.ig</span>
+                <span>suport@evalitix.ig</span>
               </div>
               <div className="flex items-center gap-3 text-sm font-bold text-slate-500">
                 <MapPin size={16} className="text-blue-500" />

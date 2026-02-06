@@ -3,6 +3,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../lib/firebase";
 import { useNavigate } from "react-router-dom";
 import { EyeIcon, EyeOffIcon, Sparkles, X, Send, CheckCircle } from "lucide-react";
+import { useEffect } from "react";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -17,6 +18,10 @@ export default function Login() {
   // Contact Modal States
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [contactSent, setContactSent] = useState(false);
+
+  useEffect(() => {
+  document.title = "Sign up";
+}, []);
 
   const handleLogin = async () => {
     setLoading(true);

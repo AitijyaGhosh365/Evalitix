@@ -3,7 +3,7 @@ import {
   AppBar, Toolbar, Typography, IconButton, 
   Avatar, Menu, MenuItem, Box, Divider, ListItemIcon 
 } from "@mui/material";
-import { LogOut, User,  Shapes } from "lucide-react"; 
+import { LogOut, User } from "lucide-react"; 
 import { logout } from "../lib/auth";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -58,7 +58,13 @@ export default function Navbar() {
               boxShadow: '0 4px 12px rgba(37, 99, 235, 0.2)'
             }} 
           >
-            <Shapes size={20} color="white" />
+            <div className="w-9 h-9 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
+                <img
+                  src="src/assets/bg_blue_txt_white_logo.png"
+                  alt="Evalitix Logo"
+                  className="w-full h-full object-contain rounded-xl"
+                />
+              </div>
           </Box>
           <Typography 
             variant="h6" 

@@ -9,8 +9,14 @@ import WhySection from '../components/LandingPageComponents/WhySection';
 import FinalCTA from '../components/LandingPageComponents/FinalCTA';
 import ContactForm from '../components/LandingPageComponents/ContactForm';
 import Footer from '../components/LandingPageComponents/Footer';
+import { useEffect } from 'react';
 
 function LandingPage() {
+
+  useEffect(() => {
+  document.title = "Evalitix";
+}, []);
+  
   return (
     <div className="min-h-screen bg-slate-50">
       <Header />
@@ -23,11 +29,12 @@ function LandingPage() {
       <div id="features">
         <KeyFeatures />
       </div>
+      
+      <WhySection />
+      <FinalCTA />
       <div id="pricing">
         <Pricing />
       </div>
-      <WhySection />
-      <FinalCTA />
       <div id="contact-form">
       <ContactForm  />
       </div>

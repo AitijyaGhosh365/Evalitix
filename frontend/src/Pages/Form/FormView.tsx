@@ -31,6 +31,12 @@ export default function FormView({ formShare }: { formShare: boolean }) {
   const [showShare, setShowShare] = useState(false);
   // const [copied, setCopied] = useState(false);
   // Fetch Logic
+
+  useEffect(() => {
+  document.title = "View Form";
+}, []);
+
+
   const fetchSubmissions = (page: number) => {
     setLoading(true);
 

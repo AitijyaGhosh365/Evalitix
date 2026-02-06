@@ -63,10 +63,10 @@ export default function TargetAudience() {
 
         {/* Bottom Social Proof Hint */}
         <div className="mt-20 flex flex-wrap justify-center items-center gap-x-12 gap-y-8 opacity-40 grayscale contrast-125">
-          <div className="font-black text-2xl tracking-tighter text-slate-900">FORBES</div>
+          {/* <div className="font-black text-2xl tracking-tighter text-slate-900">FORBES</div>
           <div className="font-black text-2xl tracking-tighter text-slate-900">TECHCRUNCH</div>
           <div className="font-black text-2xl tracking-tighter text-slate-900">WIRED</div>
-          <div className="font-black text-2xl tracking-tighter text-slate-900">VERGE</div>
+          <div className="font-black text-2xl tracking-tighter text-slate-900">VERGE</div> */}
         </div>
       </div>
     </section>

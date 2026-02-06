@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { apiFetch } from "../../lib/api";
 import FormView from "./FormView";
 import { Lock, ShieldCheck, AlertCircle, Loader2 } from "lucide-react";
@@ -15,6 +15,9 @@ export default function FormShare() {
   if (!uuid) {
     return <div className="p-6 text-red-500 font-bold">Invalid link</div>;
   }
+useEffect(() => {
+  document.title = "Form";
+}, []);
 
   const verifyPasskey = async () => {
     if (!passkey.trim()) {

@@ -27,7 +27,10 @@ export default function AccountPage() {
   const [account, setAccount] = useState<Account | null>(null);
   const [loading, setLoading] = useState(true);
 
+
+
   useEffect(() => {
+    document.title = "Account Details";
     apiFetch("/user/account")
       .then(res => res.json())
       .then(data => {

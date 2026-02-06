@@ -34,7 +34,11 @@ const STATUS_CONFIG: Record<
 export default function Dashboard() {
   const [forms, setForms] = useState<Form[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+
   const navigate = useNavigate();
+  useEffect(() => {
+  document.title = "Dashboard";
+}, []);
 
   useEffect(() => {
     apiFetch("/user/forms")
