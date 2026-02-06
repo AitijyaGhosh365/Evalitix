@@ -22,7 +22,7 @@ export default function Header() {
               <div className="w-9 h-9 bg-linear-to-br from-cyan-400 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-black text-slate-800 tracking-tighter">JobThingIG</span>
+              <span className="text-xl font-black text-slate-800 tracking-tighter">Evalitix</span>
             </div>
 
             {/* CENTER: NAV LINKS */}
@@ -52,7 +52,7 @@ export default function Header() {
           <div className="flex md:hidden items-center justify-between">
             <div className="flex items-center gap-2">
               <Sparkles className="w-6 h-6 text-blue-600" />
-              <span className="text-lg font-black text-slate-800">JobThingIG</span>
+              <span className="text-lg font-black text-slate-800">Evalitix</span>
             </div>
             
             <button

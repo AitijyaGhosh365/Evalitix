@@ -16,7 +16,7 @@ export default function Footer() {
                 <Sparkles className="w-5 h-5 text-blue-400" />
               </div>
               <span className="text-2xl font-black text-slate-900 tracking-tighter">
-                JobThingIG
+                Evalitix
               </span>
             </div>
             
@@ -88,7 +88,7 @@ export default function Footer() {
           
           <div className="flex flex-col md:flex-row items-center gap-8">
             <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-              © 2026 JobThingIG. Made for the future of work.
+              © 2026 Evalitix. Made for the future of work.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors">Privacy</a>

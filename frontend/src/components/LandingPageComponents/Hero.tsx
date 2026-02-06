@@ -70,7 +70,7 @@ export default function Hero() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-xl text-slate-500 font-medium leading-relaxed mb-12">
-          JobThingIG helps companies instantly evaluate, rank, and shortlist candidates using AI — so you spend time interviewing the best, not filtering resumes.
+          Evalitix helps companies instantly evaluate, rank, and shortlist candidates using AI — so you spend time interviewing the best, not filtering resumes.
         </p>
 
         {/* 4. TACTILE BUTTONS */}

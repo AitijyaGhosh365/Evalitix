@@ -78,7 +78,7 @@ def generate_quantifiers_llm(job_requirements : str):
         '''
 
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3-pro-preview",
             contents=prompt,
             config={
                 "response_mime_type": "application/json",  # <--- Add this line

@@ -47,7 +47,7 @@ export default function WhySection() {
             The ROI of AI
           </span>
           <h2 className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter mb-6">
-            Why <span className="text-slate-400">JobThingIG?</span>
+            Why <span className="text-slate-400">Evalitix?</span>
           </h2>
           <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto">
             We don't just automate tasks; we elevate your entire talent acquisition strategy.

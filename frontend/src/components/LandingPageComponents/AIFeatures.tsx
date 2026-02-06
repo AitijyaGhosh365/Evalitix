@@ -28,7 +28,7 @@ export default function AIFeatures() {
             </h2>
 
             <p className="text-xl text-slate-500 font-medium mb-12 leading-relaxed">
-              JobThingIG doesn't just scan keywords — it understands professional context, intent, and potential.
+              Evalitix doesn't just scan keywords — it understands professional context, intent, and potential.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
