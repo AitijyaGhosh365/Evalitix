@@ -22,7 +22,6 @@ from backend.services.permissions import assert_form_access
 from backend.services.generate_quantifiers import generate_quantifiers_llm
 
 
-
 app = FastAPI()
 
 
@@ -49,7 +48,7 @@ class QuantifierRequest(BaseModel):
     
 @app.get("/")
 def root():
-    return {"status": "ok"}
+    return {"status": "healthy"}
 
 
 # ---------------------------
@@ -59,35 +58,34 @@ def root():
 def get_user_forms(user=Depends(get_current_user)):
     uid = user["uid"]
 
-    account_ref = db.collection("accounts").document(uid)
-    account_doc = account_ref.get()
+    account = db.collection("accounts").document(uid).get().to_dict()
+    allowed_forms = account.get("forms", [])
 
-    if not account_doc.exists:
-        raise HTTPException(status_code=403, detail="Account not found")
-
-    account = account_doc.to_dict()
-    allowed_forms = set(account.get("forms", []))
+    if not allowed_forms:
+        return {"success": True, "forms": []}
 
     forms = []
-    for doc in db.collection("forms").get():
-        if doc.id not in allowed_forms:
-            continue
 
-        data = doc.to_dict()
-        meta = db.collection("form_meta").document(doc.id).get().to_dict() or {}
+    # Firestore IN limit = 10
+    for i in range(0, len(allowed_forms), 10):
+        batch = allowed_forms[i:i+10]
 
-        forms.append({
-            "uuid": doc.id,
-            "title": data.get("title"),
-            "description": data.get("description"),
-            "status": (data.get("status") or "").lower(),
-            "filledCount": meta.get("filledCount", 0),
-        })
+        query = (
+            db.collection("forms")
+            .where("uuid", "in", batch)
+            .stream()
+        )
 
-    return {
-        "success": True,
-        "forms": forms
-    }
+        for doc in query:
+            data = doc.to_dict()
+            forms.append({
+                "uuid": data.get("uuid"),
+                "title": data.get("title"),
+                "description": data.get("description"),
+                "status": (data.get("status") or "").lower(),
+            })
+
+    return {"success": True, "forms": forms}
 
 
 
