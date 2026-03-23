@@ -160,12 +160,19 @@ def generate_quantifiers(payload: QuantifierRequest):
     job_requirements = payload.jobRequirements
 
     # 🔹 Temporary logic (replace with LLM later)
-    quantifiers = generate_quantifiers_llm(job_requirements=job_requirements)
+    try:
+        quantifiers = generate_quantifiers_llm(job_requirements=job_requirements)
 
-    return {
-        "success": True,
-        "quantifiers": quantifiers
-    }
+        return {
+            "success": True,
+            "quantifiers": quantifiers
+        }
+    
+    except:
+        return {
+            "success": False,
+            "quantifiers": {}
+        }
     
 
 @app.post("/form/{form_id}/submit")
